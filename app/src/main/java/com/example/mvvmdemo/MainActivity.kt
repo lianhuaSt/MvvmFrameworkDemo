@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.mvvmdemo.ui.theme.MvvmDemoTheme
 
 class MainActivity : ComponentActivity() {
+    //dsdsdsdsdsds
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
