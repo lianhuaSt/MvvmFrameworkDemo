@@ -1,0 +1,163 @@
+import sun.security.krb5.EncryptionKey
+
+ project.ext {
+
+    //是否配置当前model 独立
+    isModelApp = true
+    //独立model名称
+    modelName = "app"
+
+    //基础配置版本信息等
+    compileSdkVersion = 31
+    buildToolsVersion = "31.0.0"
+    minSdkVersion = 21
+    targetSdkVersion = 31
+    applicationId = "com.hades.live.app"
+    versionCode = 3
+    versionName = "1.0.1"
+
+
+    setAppConfig = {
+
+
+        extension ->
+            {
+                if (project.ext.isModelApp && project.ext.modelName == project.name) {
+                    extension.apply plugin: 'com.android.application'
+                    extension.description "app"
+                } else {
+                    extension.apply plugin: 'com.android.library'
+                    extension.description "lib"
+
+                }
+                extension.apply plugin: 'kotlin-android'
+                extension.apply plugin: 'kotlin-parcelize'
+                extension.apply plugin: 'kotlin-kapt'
+
+                appImplementation = project.name
+
+                //设置通用Android配置
+                setAppOrLibAndroidConfig extension.android
+                //设置通用依赖配置
+                setDependencies extension.dependencies
+            }
+    }
+
+
+//    setLibAndroidConfig = { extension ->
+//        if (project.ext.isModelApp && project.ext.modelName == project.name) {
+//            extension.apply plugin: 'com.android.application'
+//            extension.description "app"
+//        } else {
+//            extension.apply plugin: 'com.android.library'
+//            extension.description "lib"
+//
+//        }
+//        extension.apply plugin: 'kotlin-android'
+//        extension.apply plugin: 'kotlin-parcelize'
+//        extension.apply plugin: 'kotlin-kapt'
+//
+//        appImplementation = project.name
+//
+//        //设置通用Android配置
+//        setAppOrLibAndroidConfig extension.android
+//        //设置通用依赖配置
+//        setDependencies extension.dependencies
+//
+//
+//    }
+
+
+    //设置通用的 android配置（可作为project单独调试）
+    setAppOrLibAndroidConfig = { extension ->
+        extension.compileSdkVersion project.ext.compileSdkVersion
+        extension.buildToolsVersion project.ext.buildToolsVersion
+        extension.defaultConfig {
+
+            minSdkVersion project.ext.minSdkVersion
+            targetSdkVersion project.ext.targetSdkVersion
+            versionCode project.ext.versionCode
+            versionName project.ext.versionName
+            extension.flavorDimensions "versionCode"
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+
+            ndk {
+                abiFilters "armeabi-v7a" // 保留这种架构的CPU x32
+                abiFilters "arm64-v8a" // 保留这种架构的CPU x64
+            }
+//            kapt {
+//                arguments {
+//                    arg("AROUTER_MODULE_NAME", project.getName())
+//                }
+//            }
+        }
+
+        extension.sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+
+        //使用的jdk版本
+        extension.compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+        extension.kotlinOptions {
+            jvmTarget = '1.8'
+        }
+
+
+        //动态改变清单文件资源指向
+        extension.sourceSets {
+            main {
+                if (project.ext.isModelApp && project.ext.modelName == project.name) {
+                    manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+                } else {
+                    manifest.srcFile 'src/main/AndroidManifest.xml'
+                }
+            }
+        }
+
+        extension.buildFeatures.dataBinding = true
+        extension.buildFeatures.viewBinding = true
+
+
+    }
+
+
+    //公用的三方库依赖，慎重引入，主要引入基础库依赖
+    setDependencies = { extension ->
+        extension.implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        if (appImplementation != "common" && appImplementation != "resources") {
+
+            //common做为中间层，所有的Module都要依赖
+            extension.api extension.project(path: ':common')
+        }
+
+        //针对每个Module单独进行依赖
+        switch (appImplementation) {
+            case "app":
+
+                break
+
+            case "common"://common组件是一个中间层，所有的组件都需要依赖此组件，公共的依赖便可放到这里
+
+
+                extension.api libs.androidx.core.ktx
+                extension.api libs.androidx.lifecycle.runtime.ktx
+                extension.api libs.androidx.activity.compose
+                extension.api libs.androidx.ui
+                extension.api libs.androidx.ui.graphics
+                extension.api libs.androidx.ui.tooling.preview
+                extension.api libs.androidx.material3
+
+                break
+
+        }
+    }
+
+}
