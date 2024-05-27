@@ -137,7 +137,7 @@ project.ext {
     setDependencies = { extension ->
         extension.implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-        if (appImplementation != "common" && appImplementation != "resources"&& appImplementation != "bean") {
+        if (appImplementation != "common" && appImplementation != "resources" && appImplementation != "bean") {
 
             //common做为中间层，所有的Module都要依赖
             extension.api extension.project(path: ':common')
@@ -146,7 +146,16 @@ project.ext {
         //针对每个Module单独进行依赖
         switch (appImplementation) {
             case "app":
+                extension.api extension.project(path: ':loginModel')
+                extension.api extension.project(path: ':userLib')
+
                 //aroute
+                extension.kapt 'com.alibaba:arouter-compiler:1.5.2'
+                break
+            case "loginModel":
+                extension.kapt 'com.alibaba:arouter-compiler:1.5.2'
+                break
+            case "userLib":
                 extension.kapt 'com.alibaba:arouter-compiler:1.5.2'
                 break
             case "common"://common组件是一个中间层，所有的组件都需要依赖此组件，公共的依赖便可放到这里
@@ -189,6 +198,7 @@ project.ext {
 
 
                 extension.api extension.project(path: ':resources')
+                extension.api extension.project(path: ':bean')
 //                extension.api 'com.github.li-xiaojun:XPopup:2.8.3'
                 //
                 extension.api 'com.google.code.gson:gson:2.8.6'
@@ -201,10 +211,6 @@ project.ext {
 
 
                 extension.api 'com.github.bumptech.glide:glide:4.13.1'
-
-
-
-
 
 
 //                extension.api 'com.liulishuo.filedownloader:library:1.7.7'

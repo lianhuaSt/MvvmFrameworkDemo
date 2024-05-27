@@ -1,9 +1,6 @@
 # MvvmFrameworkDemo
 组件化架构库 --- 后续会陆续添加一些的工具和借鉴下大佬写的三方库
 
-# SKu
-命名规范
-
 # 命名规范
     app - 宿主
     xxxModel - 业务包
@@ -22,11 +19,3 @@
                common   
                /   \       \
          xxxLib  resources   bean
-# 基础库
-common
-
-# 依赖库
-xxxLib
-
-# 模块库
-xxxModel

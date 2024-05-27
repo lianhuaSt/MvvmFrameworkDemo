@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.demo.login.ui.LoginVieModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/tv"
+            android:text="@{viewModel.text}"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/name"
+            android:background="@null"
+            android:hint="输入昵称"
+            android:edit_text="@{viewModel.name}"
+            android:gravity="left|center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/password"
+            android:hint="输入密码"
+            android:edit_text="@{viewModel.password}"
+            android:gravity="left|center_vertical"
+            android:background="@null"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            android:text="登陆"
+            android:onClick="@{viewModel.login}"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

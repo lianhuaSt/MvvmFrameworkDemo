@@ -11,6 +11,7 @@ android {
                     APP_NAME  : "@string/app_name",
                     BUILD_TYPE: "develop",
             ]
+            minifyEnabled false
          //   signingConfig signingConfigs.release
         }
         release {
@@ -19,6 +20,7 @@ android {
                     APP_NAME  : "@string/app_name",
                     BUILD_TYPE: "product",
             ]
+            minifyEnabled false
         //    signingConfig signingConfigs.release
 //            minifyEnabled true
 //            shrinkResources true

@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="format-detection" content="telephone=no"/><meta name="applicable-device" content="mobile"/><meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,maximum-scale=1,minimum-scale=1,viewport-fit=cover"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>赛车主页</title><link rel="icon" href="./favicon.ico"><link href="./static/css/racehome.css" rel="stylesheet"></head><body><div id="root"></div><script>function vw(e, t) {
+                var fontNum = 10;
+                var n = t.documentElement;
+                n.style.fontSize = fontNum.toString() + "vw";
+            }
+
+            function rem(e, t) {
+                // 屏蔽上层i
+                var n = t.documentElement;
+                var i = 1;
+                var maxWidth = i * 600;
+                var e = Math.min(n.clientWidth, maxWidth) / 10;
+                // 否则使用兼容方案
+                n.style.fontSize = e + 'px';
+
+                var app = document.getElementById('easy-app');
+                if (app) {
+                    app.style['max-width'] = maxWidth + 'px';
+                    app.style['margin'] = '0 auto';
+                }
+            }</script><script>(function(e, t) {
+            var n = t.documentElement;
+            vw(e, t);
+            // if (n.clientWidth <= 600) {
+            //     vw(e, t);
+            // } else {
+            //     rem(e, t);
+            //     // e.addEventListener("resize", function(){rem(e, t)});
+            // }
+        })(window, document);</script><script>"use strict";
+        var _window$popupreload, _window$api, _window$api$passshare, _window$api$shareBack, _window$api$shareCb, _window$bringBack, _window$closeSelf;
+        const emptyFunction = () => {};
+        window.cb = emptyFunction;
+        window.popupreload = (_window$popupreload = window.popupreload) !== null && _window$popupreload !== void 0 ? _window$popupreload : emptyFunction;
+        window.api = (_window$api = window.api) !== null && _window$api !== void 0 ? _window$api : {};
+        window.api.passsharetext = (_window$api$passshare = window.api.passsharetext) !== null && _window$api$passshare !== void 0 ? _window$api$passshare : emptyFunction;
+        window.api.shareBackFromApp = (_window$api$shareBack = window.api.shareBackFromApp) !== null && _window$api$shareBack !== void 0 ? _window$api$shareBack : emptyFunction;
+        window.api.shareCb = (_window$api$shareCb = window.api.shareCb) !== null && _window$api$shareCb !== void 0 ? _window$api$shareCb : emptyFunction;
+        window.bringBack = (_window$bringBack = window.bringBack) !== null && _window$bringBack !== void 0 ? _window$bringBack : emptyFunction;
+        window.closeSelf = (_window$closeSelf = window.closeSelf) !== null && _window$closeSelf !== void 0 ? _window$closeSelf : emptyFunction;</script><script src="./static/js/racehome/racehome.js"></script></body></html>

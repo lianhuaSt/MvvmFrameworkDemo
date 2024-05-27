@@ -1,0 +1,107 @@
+{
+  "files": {
+    "racehome.css": "/static/css/racehome.css",
+    "racehome.js": "/static/js/racehome/racehome.js",
+    "racerank.css": "/static/css/racerank.css",
+    "racerank.js": "/static/js/racerank/racerank.js",
+    "raceresult.css": "/static/css/raceresult.css",
+    "raceresult.js": "/static/js/raceresult/raceresult.js",
+    "racerule.css": "/static/css/racerule.css",
+    "racerule.js": "/static/js/racerule/racerule.js",
+    "rank.css": "/static/css/rank.css",
+    "rank.js": "/static/js/rank/rank.js",
+    "record.css": "/static/css/record.css",
+    "record.js": "/static/js/record/record.js",
+    "rule.css": "/static/css/rule.css",
+    "rule.js": "/static/js/rule/rule.js",
+    "static/media/bg.png": "/static/media/bg.99a50ab7e77278591a52.png",
+    "static/media/png": "/static/media/1bb2e8583039d7cfec0eab604addc1d5.63deb81b4b73fee7762c.png",
+    "static/media/wow.png": "/static/media/wow.6fc909ccbc9d21991d12.png",
+    "static/media/bgUrl1.png": "/static/media/bgUrl1.8bf5297d210f64040980.png",
+    "static/media/Saturn_result.png": "/static/media/Saturn_result.6795271abc2cb57a1437.png",
+    "static/media/Venus_result.png": "/static/media/Venus_result.8136106bd109284f46bb.png",
+    "static/media/jxsy.png": "/static/media/jxsy.041ed0d520c2de2965a1.png",
+    "static/media/bgUrl3.png": "/static/media/bgUrl3.c9e3577905c099f5460a.png",
+    "static/media/xjbgx.png": "/static/media/xjbgx.0d34c9dacc2ae17a1967.png",
+    "static/media/Saturn_icon.png": "/static/media/Saturn_icon.741d7b9c7c1ae348c108.png",
+    "static/media/Jupiter_result.png": "/static/media/Jupiter_result.c0821acb5cd50d5ad2f6.png",
+    "static/media/Uranus_result.png": "/static/media/Uranus_result.c336d0b840b8724b0a4c.png",
+    "static/media/Mercury_result.png": "/static/media/Mercury_result.d198a5fa99e8b072a3eb.png",
+    "static/media/send_bg.png": "/static/media/send_bg.04f90694fe0c4b68b811.png",
+    "static/media/txsy.png": "/static/media/txsy.d6ff02c12f2106174142.png",
+    "static/media/sxsy.png": "/static/media/sxsy.5ceb1ab075a9057e4077.png",
+    "static/media/fc.png": "/static/media/fc.e9a679f89b370ea628f0.png",
+    "static/media/Mars_result.png": "/static/media/Mars_result.ba94c455df2a0a72dae6.png",
+    "static/media/pq.png": "/static/media/pq.9d5840dd91c471598c1b.png",
+    "static/media/Mars_icon.png": "/static/media/Mars_icon.223d7fb811d01169d7d0.png",
+    "static/media/mxsy.png": "/static/media/mxsy.25c97d21dc6193899a90.png",
+    "static/media/Uranus_icon.png": "/static/media/Uranus_icon.6758cec8058ab36dc585.png",
+    "static/media/Venus_icon.png": "/static/media/Venus_icon.f49ce1050bc9abf998a0.png",
+    "static/media/Kepler_result.png": "/static/media/Kepler_result.eefbef9b3cc18b1c3b25.png",
+    "static/media/left.png": "/static/media/left.8380010f2a7ec0cd131b.png",
+    "static/media/Jupiter_icon.png": "/static/media/Jupiter_icon.8b508e7ab835b2cc58d4.png",
+    "static/media/Neptune_result.png": "/static/media/Neptune_result.061fb7c2cb46f0abd96f.png",
+    "static/media/get.png": "/static/media/get.599bce1f29e0d99a2c0f.png",
+    "static/media/Kepler_icon.png": "/static/media/Kepler_icon.fa90a43ecd2d71ebc0e5.png",
+    "static/media/Saturn_icon2.png": "/static/media/Saturn_icon2.ac2146853134d507f3f1.png",
+    "static/media/Mercury_icon.png": "/static/media/Mercury_icon.56e5089cdd7159c93ec5.png",
+    "static/media/hxsy.png": "/static/media/hxsy.9870e4c00838bf8e6c5b.png",
+    "static/media/txcs.png": "/static/media/txcs.484891f2364894d08e99.png",
+    "static/media/Kepler_icon2.png": "/static/media/Kepler_icon2.2ebeda66bebef982d023.png",
+    "static/media/twxsy.png": "/static/media/twxsy.bdad14870db5871d204a.png",
+    "static/media/Neptune_icon.png": "/static/media/Neptune_icon.80e338673d2f7b028f4c.png",
+    "static/media/hwxsy.png": "/static/media/hwxsy.fa0121b69b79242f262d.png",
+    "static/media/Neptune_icon2.png": "/static/media/Neptune_icon2.6a0f54e363510e7abe5c.png",
+    "static/media/Mercury_icon2.png": "/static/media/Mercury_icon2.03ea3cbf3fc527156226.png",
+    "static/media/Mars_icon2.png": "/static/media/Mars_icon2.0f2dceaf19ef918a0c0b.png",
+    "static/media/record.png": "/static/media/record.668e0428f6d56c7baa31.png",
+    "static/media/howplay.png": "/static/media/howplay.bf08ff5fc93056fb391e.png",
+    "static/media/pq_disable.png": "/static/media/pq_disable.605c864636065f0dc395.png",
+    "static/media/rank.png": "/static/media/rank.2751d4edfcd9f8b33870.png",
+    "static/media/selectnum_bg.png": "/static/media/selectnum_bg.9f216bf2fe8132bb5a44.png",
+    "racehome.css.map": "/static/css/racehome.css.map",
+    "racehome.js.map": "/static/js/racehome/racehome.js.map",
+    "racerank.css.map": "/static/css/racerank.css.map",
+    "racerank.js.map": "/static/js/racerank/racerank.js.map",
+    "raceresult.css.map": "/static/css/raceresult.css.map",
+    "raceresult.js.map": "/static/js/raceresult/raceresult.js.map",
+    "racerule.css.map": "/static/css/racerule.css.map",
+    "racerule.js.map": "/static/js/racerule/racerule.js.map",
+    "rank.css.map": "/static/css/rank.css.map",
+    "rank.js.map": "/static/js/rank/rank.js.map",
+    "record.css.map": "/static/css/record.css.map",
+    "record.js.map": "/static/js/record/record.js.map",
+    "rule.css.map": "/static/css/rule.css.map",
+    "rule.js.map": "/static/js/rule/rule.js.map"
+  },
+  "entrypoints": {
+    "racehome": [
+      "static/css/racehome.css",
+      "static/js/racehome/racehome.js"
+    ],
+    "racerank": [
+      "static/css/racerank.css",
+      "static/js/racerank/racerank.js"
+    ],
+    "raceresult": [
+      "static/css/raceresult.css",
+      "static/js/raceresult/raceresult.js"
+    ],
+    "racerule": [
+      "static/css/racerule.css",
+      "static/js/racerule/racerule.js"
+    ],
+    "rank": [
+      "static/css/rank.css",
+      "static/js/rank/rank.js"
+    ],
+    "record": [
+      "static/css/record.css",
+      "static/js/record/record.js"
+    ],
+    "rule": [
+      "static/css/rule.css",
+      "static/js/rule/rule.js"
+    ]
+  }
+}
