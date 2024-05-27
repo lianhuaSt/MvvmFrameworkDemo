@@ -137,7 +137,7 @@ project.ext {
     setDependencies = { extension ->
         extension.implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-        if (appImplementation != "common" && appImplementation != "resources") {
+        if (appImplementation != "common" && appImplementation != "resources"&& appImplementation != "bean") {
 
             //common做为中间层，所有的Module都要依赖
             extension.api extension.project(path: ':common')
