@@ -1,2 +1,41 @@
 apply from: "${rootProject.rootDir}/config.gradle"
 project.ext.setAppConfig project
+
+android {
+
+
+    buildTypes {
+        debug {
+            debuggable true
+            manifestPlaceholders = [
+                    APP_NAME  : "@string/app_name",
+                    BUILD_TYPE: "develop",
+            ]
+         //   signingConfig signingConfigs.release
+        }
+        release {
+            debuggable false
+            manifestPlaceholders = [
+                    APP_NAME  : "@string/app_name",
+                    BUILD_TYPE: "product",
+            ]
+        //    signingConfig signingConfigs.release
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // feature APK.
+            enableSplit = false
+        }
+    }
+
+}

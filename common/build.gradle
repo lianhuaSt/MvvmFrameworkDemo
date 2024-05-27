@@ -1,2 +1,3 @@
 apply from: "${rootProject.rootDir}/config.gradle"
-project.ext.setAppConfig project
+project.ext.setLibAndroidConfig project
+
